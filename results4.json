@@ -1,0 +1,705 @@
+{
+ "n": 5842,
+ "target_mean": 4.063,
+ "target_std": 2.075,
+ "late_rate": 33.7,
+ "n_train": 4673,
+ "n_test": 1169,
+ "cv_table": [
+  {
+   "model": "Mean predictor",
+   "rmse_mean": 2.0898,
+   "rmse_sd": 0.0,
+   "mae_mean": 1.6139,
+   "r2_mean": 0.0
+  },
+  {
+   "model": "Planned days (naive)",
+   "rmse_mean": 1.3492,
+   "rmse_sd": 0.0,
+   "mae_mean": 0.7073,
+   "r2_mean": 0.5832
+  },
+  {
+   "model": "Linear Regression",
+   "rmse_mean": 1.173,
+   "rmse_sd": 0.1021,
+   "mae_mean": 0.7827,
+   "r2_mean": 0.6842
+  },
+  {
+   "model": "Ridge (alpha=10)",
+   "rmse_mean": 1.1729,
+   "rmse_sd": 0.1024,
+   "mae_mean": 0.7825,
+   "r2_mean": 0.6843
+  },
+  {
+   "model": "Decision Tree (depth 6)",
+   "rmse_mean": 1.2273,
+   "rmse_sd": 0.0987,
+   "mae_mean": 0.7997,
+   "r2_mean": 0.6545
+  },
+  {
+   "model": "Random Forest",
+   "rmse_mean": 1.2097,
+   "rmse_sd": 0.1069,
+   "mae_mean": 0.8085,
+   "r2_mean": 0.6641
+  },
+  {
+   "model": "Gradient Boosting (default)",
+   "rmse_mean": 1.2401,
+   "rmse_sd": 0.1039,
+   "mae_mean": 0.8281,
+   "r2_mean": 0.6471
+  },
+  {
+   "model": "Gradient Boosting (MAE loss)",
+   "rmse_mean": 1.3275,
+   "rmse_sd": 0.1296,
+   "mae_mean": 0.751,
+   "r2_mean": 0.5954
+  }
+ ],
+ "best_params": {
+  "learning_rate": 0.03,
+  "max_depth": 2,
+  "max_iter": 300,
+  "min_samples_leaf": 20
+ },
+ "best_cv_rmse": 1.1798,
+ "grid_size": 48,
+ "grid_rmse_range": [
+  1.1798,
+  1.2637
+ ],
+ "test_table": [
+  {
+   "model": "Planned days (naive)",
+   "rmse": 1.3944,
+   "mae": 0.7536,
+   "r2": 0.5197,
+   "within1": 85.1155
+  },
+  {
+   "model": "Linear Regression",
+   "rmse": 1.1915,
+   "mae": 0.7991,
+   "r2": 0.6493,
+   "within1": 87.6818
+  },
+  {
+   "model": "Ridge (alpha=10)",
+   "rmse": 1.1917,
+   "mae": 0.7993,
+   "r2": 0.6492,
+   "within1": 87.3396
+  },
+  {
+   "model": "Decision Tree (depth 6)",
+   "rmse": 1.2294,
+   "mae": 0.8158,
+   "r2": 0.6267,
+   "within1": 85.7998
+  },
+  {
+   "model": "Random Forest",
+   "rmse": 1.2087,
+   "mae": 0.8098,
+   "r2": 0.6391,
+   "within1": 86.8263
+  },
+  {
+   "model": "Gradient Boosting (default)",
+   "rmse": 1.2387,
+   "mae": 0.8292,
+   "r2": 0.621,
+   "within1": 85.4577
+  },
+  {
+   "model": "Gradient Boosting (MAE loss)",
+   "rmse": 1.3513,
+   "mae": 0.7708,
+   "r2": 0.549,
+   "within1": 85.6287
+  },
+  {
+   "model": "Gradient Boosting (tuned)",
+   "rmse": 1.1839,
+   "mae": 0.7902,
+   "r2": 0.6538,
+   "within1": 87.5962
+  }
+ ],
+ "resid": {
+  "mean": 0.0451,
+  "sd": 1.1831
+ },
+ "p_resid_abs_le1": 73.2,
+ "boot_rmse_ci": [
+  1.081,
+  1.297
+ ],
+ "boot_r2_ci": [
+  0.607,
+  0.699
+ ],
+ "mae_by_carrier": {
+  "CargoPlus": 1.177,
+  "EcoFreight": 0.627,
+  "RoadKing": 0.659,
+  "SwiftLine": 0.656
+ },
+ "mae_by_mode": {
+  "Air": 0.588,
+  "Rail": 0.877,
+  "Road": 0.79
+ },
+ "mae_by_peak": {
+  "0": 0.702,
+  "1": 0.991
+ },
+ "temporal": {
+  "n_train": 4692,
+  "n_test": 1150,
+  "rmse": 1.4976,
+  "mae": 1.0055,
+  "r2": 0.5735,
+  "naive_rmse": 1.7577
+ },
+ "perm_importance": {
+  "planned_days": 1.2377,
+  "carrier": 0.0934,
+  "month": 0.0354,
+  "origin_hub": 0.0234,
+  "mode": 0.0034,
+  "dest_region": 0.0028,
+  "weight_kg": 0.0018,
+  "distance_km": 0.0013,
+  "units": 0.0013,
+  "volume_m3": 0.0001,
+  "peak_season": 0.0,
+  "monsoon": 0.0,
+  "priority": -0.0001
+ },
+ "clf": {
+  "auc": 0.7275,
+  "pr_auc": 0.5442,
+  "brier": 0.1936,
+  "brier_base": 0.2234,
+  "base_rate": 0.337,
+  "acc_05": 0.6972,
+  "acc_base": 0.663
+ },
+ "lift_top10": {
+  "captured_pct": 18.0,
+  "precision_pct": 61.2,
+  "lift": 1.82
+ },
+ "lift_top20": {
+  "captured_pct": 34.0,
+  "precision_pct": 57.5,
+  "lift": 1.71
+ },
+ "calib_max_gap": 0.073,
+ "promise": [
+  {
+   "policy": "Promise = planned days",
+   "avg_days": 3.56,
+   "hit": 66.3
+  },
+  {
+   "policy": "Planned + 1 day (flat buffer)",
+   "avg_days": 4.56,
+   "hit": 86.17
+  },
+  {
+   "policy": "Planned + 2 days (flat buffer)",
+   "avg_days": 5.56,
+   "hit": 93.17
+  },
+  {
+   "policy": "Model P70 (ceil)",
+   "avg_days": 4.83,
+   "hit": 89.16
+  },
+  {
+   "policy": "Model P80 (ceil)",
+   "avg_days": 5.19,
+   "hit": 92.28
+  },
+  {
+   "policy": "Model P90 (ceil)",
+   "avg_days": 5.94,
+   "hit": 96.2
+  },
+  {
+   "policy": "Model P95 (ceil)",
+   "avg_days": 6.53,
+   "hit": 97.79
+  }
+ ],
+ "flat1_hit": 86.17,
+ "seg_hits": {
+  "flat2": {
+   "peak": {
+    "0": 94.9,
+    "1": 89.3
+   },
+   "carrier": {
+    "CargoPlus": 84.3,
+    "EcoFreight": 95.7,
+    "RoadKing": 96.1,
+    "SwiftLine": 96.1
+   },
+   "hub": {
+    "Chennai": 92.5,
+    "Delhi": 94.3,
+    "Kolkata": 86.4,
+    "Mumbai": 95.2,
+    "Pune": 94.8
+   },
+   "mode": {
+    "Air": 96.1,
+    "Rail": 90.8,
+    "Road": 93.6
+   },
+   "min_group": 84.29577464788733
+  },
+  "P80": {
+   "peak": {
+    "0": 93.5,
+    "1": 89.5
+   },
+   "carrier": {
+    "CargoPlus": 87.6,
+    "EcoFreight": 93.6,
+    "RoadKing": 93.8,
+    "SwiftLine": 93.9
+   },
+   "hub": {
+    "Chennai": 91.8,
+    "Delhi": 92.8,
+    "Kolkata": 88.9,
+    "Mumbai": 93.4,
+    "Pune": 93.0
+   },
+   "mode": {
+    "Air": 95.6,
+    "Rail": 90.7,
+    "Road": 92.4
+   },
+   "min_group": 87.60563380281691
+  },
+  "P90": {
+   "peak": {
+    "0": 96.9,
+    "1": 94.6
+   },
+   "carrier": {
+    "CargoPlus": 94.2,
+    "EcoFreight": 96.4,
+    "RoadKing": 97.1,
+    "SwiftLine": 97.0
+   },
+   "hub": {
+    "Chennai": 95.9,
+    "Delhi": 96.0,
+    "Kolkata": 94.6,
+    "Mumbai": 97.0,
+    "Pune": 97.1
+   },
+   "mode": {
+    "Air": 97.5,
+    "Rail": 94.8,
+    "Road": 96.5
+   },
+   "min_group": 94.15492957746478
+  }
+ },
+ "q90_by_carrier_hit": {
+  "CargoPlus": 94.2,
+  "EcoFreight": 96.4,
+  "RoadKing": 97.1,
+  "SwiftLine": 97.0
+ },
+ "q90_by_peak_hit": {
+  "0": 96.9,
+  "1": 94.6
+ },
+ "flat2_by_peak_hit": {
+  "0": 94.9,
+  "1": 89.3
+ },
+ "cost_model": {
+  "r2_log": 0.9423,
+  "mape": 10.91
+ },
+ "carriers": [
+  "CargoPlus",
+  "EcoFreight",
+  "RoadKing",
+  "SwiftLine"
+ ],
+ "opt_baseline": {
+  "freight": 22322803.638625532,
+  "exp_late": 1969.9190623541194,
+  "otd": 66.28005713190484,
+  "total": 23504755.076038003,
+  "switched": 0,
+  "switch_cost": 0.0,
+  "net_total": 23504755.076038003,
+  "mix": {
+   "CargoPlus": 24.3,
+   "EcoFreight": 18.3,
+   "RoadKing": 27.4,
+   "SwiftLine": 29.9
+  }
+ },
+ "actual_spend": 23418569.0,
+ "pen": 600.0,
+ "opt_scen": {
+  "S1_free_40cap": {
+   "freight": 21143970.9793135,
+   "exp_late": 1679.6740798732076,
+   "otd": 71.24830400764793,
+   "total": 22151775.427237425,
+   "switched": 2426,
+   "switch_cost": 194080.0,
+   "net_total": 22345855.427237425,
+   "mix": {
+    "CargoPlus": 0.0,
+    "EcoFreight": 40.0,
+    "RoadKing": 40.0,
+    "SwiftLine": 20.0
+   },
+   "status": 0
+  },
+  "S2_cp12": {
+   "freight": 21143970.9793135,
+   "exp_late": 1679.6740798732076,
+   "otd": 71.24830400764793,
+   "total": 22151775.427237425,
+   "switched": 2426,
+   "switch_cost": 194080.0,
+   "net_total": 22345855.427237425,
+   "mix": {
+    "CargoPlus": 0.0,
+    "EcoFreight": 40.0,
+    "RoadKing": 40.0,
+    "SwiftLine": 20.0
+   },
+   "status": 0
+  },
+  "S3_recommended": {
+   "freight": 21212451.50634943,
+   "exp_late": 1738.978554159893,
+   "otd": 70.23316408490426,
+   "total": 22255838.638845365,
+   "switched": 2110,
+   "switch_cost": 168800.0,
+   "net_total": 22424638.638845365,
+   "mix": {
+    "CargoPlus": 5.0,
+    "EcoFreight": 38.0,
+    "RoadKing": 38.0,
+    "SwiftLine": 19.0
+   },
+   "status": 0
+  },
+  "S4_cap30": {
+   "freight": 21413773.893483944,
+   "exp_late": 1762.9873122912368,
+   "otd": 69.82219595530235,
+   "total": 22471566.280858688,
+   "switched": 1989,
+   "switch_cost": 159120.0,
+   "net_total": 22630686.280858688,
+   "mix": {
+    "CargoPlus": 10.0,
+    "EcoFreight": 30.0,
+    "RoadKing": 30.0,
+    "SwiftLine": 30.0
+   },
+   "status": 0
+  }
+ },
+ "moved_from_cp": {
+  "n": 1141,
+  "cp_actual_late_pct": 53.2,
+  "pred_late_cp_pct": 52.6,
+  "pred_late_new_pct": 30.4
+ },
+ "move_matrix": {
+  "CargoPlus": {
+   "CargoPlus": 279,
+   "EcoFreight": 529,
+   "RoadKing": 563,
+   "SwiftLine": 49
+  },
+  "EcoFreight": {
+   "CargoPlus": 12,
+   "EcoFreight": 984,
+   "RoadKing": 0,
+   "SwiftLine": 75
+  },
+  "RoadKing": {
+   "CargoPlus": 2,
+   "EcoFreight": 112,
+   "RoadKing": 1485,
+   "SwiftLine": 3
+  },
+  "SwiftLine": {
+   "CargoPlus": 0,
+   "EcoFreight": 594,
+   "RoadKing": 171,
+   "SwiftLine": 984
+  }
+ },
+ "frontier": [
+  {
+   "pen": 0,
+   "freight": 21208847.73690593,
+   "otd": 69.8631778533751,
+   "freight_vs_base_pct": -4.9902150274354735,
+   "otd_gain": 3.5831207214702703,
+   "switched": 2076,
+   "total_saving": 947875.9017196037
+  },
+  {
+   "pen": 200,
+   "freight": 21208435.98833611,
+   "otd": 69.98554678762432,
+   "freight_vs_base_pct": -4.9920595474002845,
+   "otd_gain": 3.705489655719471,
+   "switched": 2090,
+   "total_saving": 990462.5914268494
+  },
+  {
+   "pen": 400,
+   "freight": 21210493.82069007,
+   "otd": 70.13089421470329,
+   "freight_vs_base_pct": -4.982841026343188,
+   "otd_gain": 3.850837082798451,
+   "switched": 2097,
+   "total_saving": 1034536.1788862981
+  },
+  {
+   "pen": 600,
+   "freight": 21212451.50634943,
+   "otd": 70.23316408490426,
+   "freight_vs_base_pct": -4.974071134840974,
+   "otd_gain": 3.953106952999424,
+   "switched": 2110,
+   "total_saving": 1080116.4371926375
+  },
+  {
+   "pen": 900,
+   "freight": 21215861.57985941,
+   "otd": 70.3807626268991,
+   "freight_vs_base_pct": -4.958794946575451,
+   "otd_gain": 4.100705494994266,
+   "switched": 2147,
+   "total_saving": 1150788.9522819296
+  },
+  {
+   "pen": 1200,
+   "freight": 21219524.597925592,
+   "otd": 70.5219105153003,
+   "freight_vs_base_pct": -4.942385636501845,
+   "otd_gain": 4.241853383395461,
+   "switched": 2210,
+   "total_saving": 1223849.9302894957
+  },
+  {
+   "pen": 1500,
+   "freight": 21223754.401489303,
+   "otd": 70.66294781719775,
+   "freight_vs_base_pct": -4.923437283811993,
+   "otd_gain": 4.382890685292915,
+   "switched": 2296,
+   "total_saving": 1299441.9478884488
+  }
+ ],
+ "base_freight_pred": 22322803.638625532,
+ "base_otd_pred": 66.28005713190484,
+ "cap_sens": [
+  {
+   "cap": 0.3,
+   "otd": 69.82219595530235,
+   "freight": 21413773.893483944,
+   "switched": 1989,
+   "saving": 874068.7951793149,
+   "mix": {
+    "CargoPlus": 10.0,
+    "EcoFreight": 30.0,
+    "RoadKing": 30.0,
+    "SwiftLine": 30.0
+   }
+  },
+  {
+   "cap": 0.34,
+   "otd": 70.60451961563228,
+   "freight": 21293259.452322274,
+   "switched": 2072,
+   "saving": 1015365.2452828698,
+   "mix": {
+    "CargoPlus": 5.0,
+    "EcoFreight": 34.0,
+    "RoadKing": 34.0,
+    "SwiftLine": 27.0
+   }
+  },
+  {
+   "cap": 0.38,
+   "otd": 70.23316408490426,
+   "freight": 21212451.50634943,
+   "switched": 2110,
+   "saving": 1080116.4371926375,
+   "mix": {
+    "CargoPlus": 5.0,
+    "EcoFreight": 38.0,
+    "RoadKing": 38.0,
+    "SwiftLine": 19.0
+   }
+  },
+  {
+   "cap": 0.45,
+   "otd": 69.63210536637551,
+   "freight": 21073229.629456535,
+   "switched": 2738,
+   "saving": 1148030.0038836636,
+   "mix": {
+    "CargoPlus": 5.0,
+    "EcoFreight": 45.0,
+    "RoadKing": 45.0,
+    "SwiftLine": 5.0
+   }
+  }
+ ],
+ "sw_sens": [
+  {
+   "sw": 0,
+   "switched": 4419,
+   "switched_pct": 75.64190345771996,
+   "otd": 70.46978904287867,
+   "freight": 21152906.053726517,
+   "saving": 1316756.0678424686
+  },
+  {
+   "sw": 80,
+   "switched": 2110,
+   "switched_pct": 36.11776788770969,
+   "otd": 70.23316408490426,
+   "freight": 21212451.50634943,
+   "saving": 1080116.4371926375
+  },
+  {
+   "sw": 200,
+   "switched": 1757,
+   "switched_pct": 30.075316672372477,
+   "otd": 70.18324577217707,
+   "freight": 21249561.21697252,
+   "saving": 858656.9898718335
+  },
+  {
+   "sw": 400,
+   "switched": 1341,
+   "switched_pct": 22.95446764806573,
+   "otd": 70.16446938812248,
+   "freight": 21367475.45107631,
+   "saving": 555084.6059541628
+  }
+ ],
+ "ex_reg": {
+  "shipment_id": "SH103212",
+  "origin_hub": "Kolkata",
+  "dest_region": "North",
+  "carrier": "CargoPlus",
+  "mode": "Road",
+  "distance_km": 1506.0,
+  "weight_kg": 110.3,
+  "planned_days": 4.0,
+  "month": 10.0,
+  "pred_days": 6.068096101713239,
+  "actual_days": 9.0,
+  "p_late": 0.6773071777322621
+ },
+ "ex_opt": {
+  "shipment_id": "SH102954",
+  "origin_hub": "Delhi",
+  "dest_region": "East",
+  "distance_km": 1513.0,
+  "weight_kg": 458.2,
+  "current": "CargoPlus",
+  "chosen": "RoadKing",
+  "rows": [
+   {
+    "carrier": "CargoPlus",
+    "cost": 4002.652545783786,
+    "p_late": 0.5508963000949955,
+    "penalty": 330.5377800569973,
+    "switch": 0.0,
+    "objective": 4333.190325840784
+   },
+   {
+    "carrier": "EcoFreight",
+    "cost": 3449.0918263865406,
+    "p_late": 0.40036256864730274,
+    "penalty": 240.21754118838163,
+    "switch": 80.0,
+    "objective": 3769.3093675749224
+   },
+   {
+    "carrier": "RoadKing",
+    "cost": 3513.9039079626505,
+    "p_late": 0.3912691648965258,
+    "penalty": 234.7614989379155,
+    "switch": 80.0,
+    "objective": 3828.665406900566
+   },
+   {
+    "carrier": "SwiftLine",
+    "cost": 3753.620825097668,
+    "p_late": 0.35430984224415435,
+    "penalty": 212.5859053464926,
+    "switch": 80.0,
+    "objective": 4046.2067304441607
+   }
+  ]
+ },
+ "moved_from_cp_s4": {
+  "n": 961,
+  "cp_actual_late_pct": 53.6,
+  "pred_late_new_pct": 28.8
+ },
+ "move_matrix_s4": {
+  "CargoPlus": {
+   "CargoPlus": 459,
+   "EcoFreight": 384,
+   "RoadKing": 361,
+   "SwiftLine": 216
+  },
+  "EcoFreight": {
+   "CargoPlus": 54,
+   "EcoFreight": 845,
+   "RoadKing": 0,
+   "SwiftLine": 172
+  },
+  "RoadKing": {
+   "CargoPlus": 73,
+   "EcoFreight": 102,
+   "RoadKing": 1306,
+   "SwiftLine": 121
+  },
+  "SwiftLine": {
+   "CargoPlus": 0,
+   "EcoFreight": 421,
+   "RoadKing": 85,
+   "SwiftLine": 1243
+  }
+ },
+ "late_total": 1969
+}
